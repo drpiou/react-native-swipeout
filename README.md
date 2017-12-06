@@ -12,6 +12,7 @@ I have found [this](https://github.com/dancormier/react-native-swipeout/issues/1
 I just added `prop-types` and `create-react-class` to dependencies in order to run this package with 0.50+ version of `react-native`. That\`s all. And a bit of refactoring.
 
 This is how it works:
+
 ![swipeout preview](https://i.imgur.com/QcNDopj.gif)
 
 ## Installation
