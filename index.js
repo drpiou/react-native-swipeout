@@ -303,7 +303,7 @@ const Swipeout = createReactClass({
     this.refs.swipeoutContent.measure((ox, oy, width, height) => {
       this.setState({
         btnWidth: (width/5),
-        btnsRightWidth: this.props.right ? (width/5)*this.props.right.length : 0,
+        btnsRightWidth: this.props.right ? (this.props.buttonWidth || (width/5))*this.props.right.length : 0,
       }, () => {
         this._tweenContent('contentPos', -this.state.btnsRightWidth);
         this._callOnOpen();
@@ -321,7 +321,7 @@ const Swipeout = createReactClass({
     this.refs.swipeoutContent.measure((ox, oy, width, height) => {
       this.setState({
         btnWidth: (width/5),
-        btnsLeftWidth: this.props.left ? (width/5)*this.props.left.length : 0,
+        btnsLeftWidth: this.props.left ? (this.props.buttonWidth || (width/5))*this.props.left.length : 0,
       }, () => {
         this._tweenContent('contentPos', this.state.btnsLeftWidth);
         this._callOnOpen();
